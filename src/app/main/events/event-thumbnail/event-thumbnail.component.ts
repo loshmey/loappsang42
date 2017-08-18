@@ -12,4 +12,8 @@ export class EventThumbnailComponent {
 
   constructor() { }
 
+  showDetailsFor(id: number) {
+
+  }
+
 }

@@ -8,7 +8,7 @@ export class EventsService {
   }
 
   getEvent(id: number) {
-    return EVENTS.find(event => event.id === id);
+    return EVENTS.find(event => event.id == id);
   }
 
 }
@@ -20,7 +20,7 @@ const EVENTS = [
     date: '9/26/2036',
     time: '10:00 am',
     price: 599.99,
-    imageUrl: '/app/assets/images/angularconnect-shield.png',
+    imageUrl: '/assets/angularconnect-shield.png',
     location: {
       address: '1057 DT',
       city: 'London',
@@ -98,7 +98,7 @@ const EVENTS = [
     date: '4/15/2037',
     time: '9:00 am',
     price: 950.00,
-    imageUrl: '/app/assets/images/ng-nl.png',
+    imageUrl: '/assets/ng-nl.png',
     location: {
       address: 'The NG-NL Convention Center & Scuba Shop',
       city: 'Amsterdam',
@@ -158,7 +158,7 @@ const EVENTS = [
     date: '5/4/2037',
     time: '9:00 am',
     price: 759.00,
-    imageUrl: '/app/assets/images/ng-conf.png',
+    imageUrl: '/assets/ng-conf.png',
     location: {
       address: 'The Palatial America Hotel',
       city: 'Salt Lake City',
@@ -240,7 +240,7 @@ const EVENTS = [
     date: '6/10/2037',
     time: '8:00 am',
     price: 800.00,
-    imageUrl: '/app/assets/images/basic-shield.png',
+    imageUrl: '/assets/basic-shield.png',
     location: {
       address: 'The UN Angular Center',
       city: 'New York',
@@ -289,7 +289,7 @@ const EVENTS = [
     date: '2/10/2037',
     time: '9:00 am',
     price: 400.00,
-    imageUrl: '/app/assets/images/ng-vegas.png',
+    imageUrl: '/assets/ng-vegas.png',
     location: {
       address: 'The Excalibur',
       city: 'Las Vegas',
