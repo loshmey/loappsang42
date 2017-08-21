@@ -6,15 +6,30 @@ import {EventsListComponent} from './events-list/events-list.component';
 import { EventThumbnailComponent } from './event-thumbnail/event-thumbnail.component';
 import {EventsService} from './events.service';
 import {EventDetailsComponent} from './event-details/event-details.component';
+import {CreateEventComponent} from './create-event/create-event.component';
+import {EventRouteActivatorService} from './event-details/event-route-activator.service';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule
   ],
-  declarations: [EventsComponent, EventsListComponent, EventThumbnailComponent, EventDetailsComponent],
-  providers: [EventsService],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  exports: [EventsComponent]
+  declarations: [
+    EventsComponent,
+    EventsListComponent,
+    EventThumbnailComponent,
+    EventDetailsComponent,
+    CreateEventComponent
+  ],
+  providers: [
+    EventsService,
+    EventRouteActivatorService
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
+  exports: [
+    EventsComponent
+  ]
 })
 export class EventsModule { }
