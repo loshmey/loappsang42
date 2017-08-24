@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {EventsService} from '../events.service';
 import {SharedService} from '../../../shared.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-events-list',
@@ -13,10 +14,11 @@ export class EventsListComponent implements OnInit {
 
   constructor(
     private eventService: EventsService,
-    private sharedService: SharedService) { }
+    private sharedService: SharedService,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.events = this.eventService.getEvents();
+    this.events = this.route.snapshot.data['events'];
   }
 
   handleThumbnailClick(id: number) {

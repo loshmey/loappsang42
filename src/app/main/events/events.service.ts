@@ -1,10 +1,17 @@
 import { Injectable } from '@angular/core';
+import {Subject} from 'rxjs/Subject';
+import {setTime} from 'ngx-bootstrap/timepicker/timepicker.utils';
 
 @Injectable()
 export class EventsService {
 
   getEvents() {
-    return EVENTS;
+    let subject: any = new Subject();
+    setTimeout(() => {
+      subject.next(EVENTS);
+      subject.complete();
+    }, 200);
+    return subject;
   }
 
   getEvent(id: number) {

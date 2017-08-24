@@ -9,6 +9,7 @@ import {EventDetailsComponent} from './event-details/event-details.component';
 import {CreateEventComponent} from './create-event/create-event.component';
 import {EventRouteActivatorService} from './event-route-activator.service';
 import {EventRouteDeactivatorService} from './event-route-deactivator.service';
+import {EventsListResolverService} from './events-list/events-list-resolver.service';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import {EventRouteDeactivatorService} from './event-route-deactivator.service';
   providers: [
     EventsService,
     EventRouteActivatorService,
-    EventRouteDeactivatorService
+    EventRouteDeactivatorService,
+    EventsListResolverService
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

@@ -6,6 +6,7 @@ import {CreateEventComponent} from './app/main/events/create-event/create-event.
 import {Error404Component} from './app/main/errors/error404.component';
 import {EventRouteActivatorService} from './app/main/events/event-route-activator.service';
 import {EventRouteDeactivatorService} from './app/main/events/event-route-deactivator.service';
+import {EventsListResolverService} from './app/main/events/events-list/events-list-resolver.service';
 
 // putanje u aplikaciji
 export const appRoutes: Routes = [
@@ -24,7 +25,10 @@ export const appRoutes: Routes = [
       },
       {
         path: 'events',
-        component: EventsListComponent
+        component: EventsListComponent,
+        resolve: {
+          events: EventsListResolverService
+        }
       },
       {
         path: 'events/:id',
