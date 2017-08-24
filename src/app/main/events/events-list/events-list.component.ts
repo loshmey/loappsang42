@@ -13,8 +13,6 @@ export class EventsListComponent implements OnInit {
   events: Array<any>;
 
   constructor(
-    private eventService: EventsService,
-    private sharedService: SharedService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
