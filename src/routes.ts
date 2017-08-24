@@ -4,7 +4,8 @@ import {Routes} from '@angular/router';
 import {MainComponent} from './app/main/main.component';
 import {CreateEventComponent} from './app/main/events/create-event/create-event.component';
 import {Error404Component} from './app/main/errors/error404.component';
-import {EventRouteActivatorService} from './app/main/events/event-details/event-route-activator.service';
+import {EventRouteActivatorService} from './app/main/events/event-route-activator.service';
+import {EventRouteDeactivatorService} from './app/main/events/event-route-deactivator.service';
 
 // putanje u aplikaciji
 export const appRoutes: Routes = [
@@ -18,7 +19,8 @@ export const appRoutes: Routes = [
       },
       {
         path: 'events/new',
-        component: CreateEventComponent
+        component: CreateEventComponent,
+        canDeactivate: [ EventRouteDeactivatorService ]
       },
       {
         path: 'events',

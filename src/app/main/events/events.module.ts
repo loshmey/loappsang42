@@ -7,7 +7,8 @@ import { EventThumbnailComponent } from './event-thumbnail/event-thumbnail.compo
 import {EventsService} from './events.service';
 import {EventDetailsComponent} from './event-details/event-details.component';
 import {CreateEventComponent} from './create-event/create-event.component';
-import {EventRouteActivatorService} from './event-details/event-route-activator.service';
+import {EventRouteActivatorService} from './event-route-activator.service';
+import {EventRouteDeactivatorService} from './event-route-deactivator.service';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import {EventRouteActivatorService} from './event-details/event-route-activator.
   ],
   providers: [
     EventsService,
-    EventRouteActivatorService
+    EventRouteActivatorService,
+    EventRouteDeactivatorService
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -32,4 +34,4 @@ import {EventRouteActivatorService} from './event-details/event-route-activator.
     EventsComponent
   ]
 })
-export class EventsModule { }
+export class EventsModule {}

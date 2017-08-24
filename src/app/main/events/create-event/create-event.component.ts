@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {SharedService} from '../../../shared.service';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-create-event',
@@ -7,6 +9,8 @@ import {Router} from '@angular/router';
   styleUrls: ['./create-event.component.css']
 })
 export class CreateEventComponent {
+
+  public isDirty: boolean = true;
 
   constructor(
     private router: Router

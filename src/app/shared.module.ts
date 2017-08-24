@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {AlertModule} from 'ngx-bootstrap';
+import {AlertModule, ModalModule} from 'ngx-bootstrap';
 import {BrowserModule} from '@angular/platform-browser';
 import {SharedService} from './shared.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -15,6 +15,7 @@ import {appRoutes} from '../routes';
 
     // bootstrap
     AlertModule.forRoot(),
+    ModalModule.forRoot(),
 
     // toastr
     ToastrModule.forRoot(),
@@ -31,6 +32,7 @@ import {appRoutes} from '../routes';
     BrowserModule,
     BrowserAnimationsModule,
     AlertModule,
+    ModalModule,
     ToastrModule,
     RouterModule
   ]
